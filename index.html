@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <div class="container">
+    <div class="w-75 mx-auto "> 
+        
+      <h1 class="text-primary fw-bolder text-center my-5"> Product Managment system</h1>
+        <div class="form-floating mb-3">
+  <input oninput=" productNameValidation()"
+ type="text" class="form-control" id="productName" placeholder="productName">
+  <label for="productName">Product Name</label>
+  <p  id="validationError" class="alert alert-danger d-none">product Name must start with upperLetter</p>
+</div>
+ <div class="form-floating mb-3">
+  <input type="text" class="form-control" id="productPrice" placeholder="productPrice">
+  <label for="productPrice">Product Price</label>
+    <p  id="emptyError" class="alert alert-danger d-none">product Price Required</p>
+
+</div>
+ <div class="form-floating mb-3">
+  <input list="catList" type="text" class="form-control" id="productCat" placeholder="productCat">
+  <label for="productCat">Product Category</label>
+  <datalist id="catList" >
+    <option>phone</option>
+    <option>samsung</option>
+    <option>tv</option>
+    <option>tablets</option>
+  </datalist>
+</div>
+ <div class="form-floating mb-3">
+  <textarea type="text" class="form-control" id="productDesc" placeholder="productDesc">
+
+  </textarea>
+  <label for="productDesc">Product Description</label>
+</div>
+ <div class="form-floating mb-3">
+  <input type="file" class="form-control" id="productImage" placeholder="productImage">
+  <label for="productImage">Product Image</label>
+
+</div>
+<button id="addBtn" onclick="addProduct()" class="btn btn-outline-primary">Add Product</button>
+<button id="updateBtn" onclick="updateProduct()" class="btn d-none btn-outline-warning">Update Product</button>
+
+
+    
+    </div>
+    </div>
+
+
+
+<div class="container">
+ <div class="w-75 mx-auto">
+    <h2 class="text-primary text-center my-3"> Search Products</h2>
+     <div class="form-floating mb-3">
+  <input oninput="searchProductName()" type="search" class="form-control" id="productSearch" placeholder="productSearch">
+  <label for="productSearch">Product Search..productName</label>
+     </div>
+       <div class="form-floating mb-3">
+
+  <input oninput="searchCat()" type="search" class="form-control" id="CatSearch" placeholder="CatSearch">
+  <label for="CatSearch">Product Search..Category</label>
+</div>
+    <h2 class="text-primary text-center my-3"> Avaliable Products</h2>
+<div class="row " id="row"> 
+
+            </div>
+        </div>
+
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
